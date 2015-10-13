@@ -1,0 +1,67 @@
+// reset
+*,
+*:before
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+
+body {
+  color: #333333;
+  font-family: $font-family;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+a {
+  color: #1a0dab;
+  text-decoration: none;
+
+  &.with-hover:hover {
+    text-decoration: underline;
+  }
+}
+
+.container {
+  margin: 10px auto;
+  max-width: 1100px;
+  padding: 0 30px;
+}
+
+
+/////////////////////////////////////
+// HEADERS
+/////////////////////////////////////
+
+$header-margin: 1em;
+$header-size: 2em;
+$header-weight: 300;
+
+@mixin headers($headerFactor) {
+  font-size: ($header-size - (.26em * $headerFactor));
+  font-weight: $header-weight;
+  margin: ($header-margin - (.2em * $headerFactor)) 0;
+}
+
+.h1 {
+  @include headers(1);
+}
+
+.h2 {
+  @include headers(2);
+}
+
+.h3 {
+  @include headers(3);
+}
+
+.h4 {
+  @include headers(4);
+}
+
+.h5 {
+  @include headers(5);
+}

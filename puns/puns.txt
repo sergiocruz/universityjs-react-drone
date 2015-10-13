@@ -1,0 +1,12 @@
+I used React to fly a drone. I probably shouldn’t have. I might have over-reacted.
+
+If this doesn’t work, Cloudspace’s CTO said he’d cancel all the meetups
+
+My ultimate goal with this technology is that it gets acquired by Amazon
+
+because it’s written in JavaScript, it can easily connect to the cloud if you fly it high enough
+
+I tried making it in Angular but all it did was go in an angle… towards the ground
+
+it works on the front-end and back-end, but can’t go side-to-side yet
+

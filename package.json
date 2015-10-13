@@ -1,0 +1,44 @@
+{
+  "name": "university-js-drone",
+  "version": "0.0.1",
+  "description": "Full stack solution to control your Parrot 2.0 app",
+  "main": "server.js",
+  "author": "Sergio Cruz <hello@sergiocruz.me>",
+  "license": "ISC",
+  "scripts": {
+    "start": "./node_modules/gulp/bin/gulp.js watch"
+  },
+  "devDependencies": {
+    "ar-drone": "^0.3.3",
+    "babel": "^5.8.12",
+    "babel-core": "^5.8.23",
+    "babelify": "^6.1.3",
+    "browser-sync": "^2.9.3",
+    "browserify": "^11.0.0",
+    "eslint": "^1.6.0",
+    "eslint-plugin-react": "^3.5.1",
+    "exorcist": "^0.4.0",
+    "ffmpeg": "0.0.4",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-sass": "^2.0.4",
+    "gulp-util": "^3.0.6",
+    "jquery": "^2.1.4",
+    "lodash": "^3.10.1",
+    "node-sass": "^3.3.2",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "reactify": "^1.1.1",
+    "rolling-spider": "^1.5.0",
+    "socket.io": "^1.3.6",
+    "socket.io-client": "^1.3.6",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.3.0"
+  },
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "express": "^4.13.3"
+  },
+  "engine": "node 4.2.0"
+}
