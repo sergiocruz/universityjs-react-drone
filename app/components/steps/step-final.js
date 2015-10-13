@@ -9,12 +9,14 @@ export default ({ status, takeoff, land, emergency, move, turn }) => {
         { status }
       </p>
 
+      <img src="http://label.sliptrickrecords.com/wp-content/uploads/2015/02/BlekGoat-logo_head_white-square-300x300.jpg" alt="" id="goat"/>
+
       <div className="buttons">
         <button onClick={takeoff}>Takeoff</button>
         <button onClick={land}>Land</button>
         <button onClick={emergency}>Emergency</button>
       </div>
-      
+
       <ul className="d-arrows left">
         <li className="d-arrow">
           <a href="" onClick={move.bind(null, 'forward')}>Move forward</a>

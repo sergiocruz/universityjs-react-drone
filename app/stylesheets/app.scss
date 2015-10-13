@@ -3,6 +3,14 @@
 @import 'mixins';
 @import 'general';
 
+#goat {
+  height: 15rem;
+  width: 15rem;
+  position: absolute;
+  top: 15vh;
+  left: calc(50% - 7.5rem);
+}
+
 
 .d-arrow {
   background: white;
