@@ -101,8 +101,7 @@ export default class App extends React.Component {
       e.preventDefault();
     }
 
-    console.log('move', direction);
-
+    console.log('_move()', direction);
     socket.emit('move', direction);
 
   }
@@ -113,6 +112,7 @@ export default class App extends React.Component {
       e.preventDefault();
     }
 
+    console.log('_turn()', direction);
     socket.emit('turn', direction);
   }
 
