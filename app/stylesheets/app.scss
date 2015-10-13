@@ -35,6 +35,31 @@
     text-align: center;
     font-size: 1rem;
     font-weight: bold;
+    max-width: 50%;
+  }
+
+  > .fa {
+    position: absolute;
+    top: calc(50% - 11px);
+    left: calc(50% - 11px);
+    font-size: 2rem;
+    color: #ddd;
+  }
+
+  &:first-child > .fa {
+    transform: translate(-2.2rem, -2.2rem) rotate(-45deg);
+  }
+
+  &:nth-child(2) > .fa {
+    transform: translate(2.2rem, -2.2rem) rotate(-45deg);
+  }
+
+  &:nth-child(3) > .fa {
+    transform: translate(-2.2rem, 2.2rem) rotate(-45deg);
+  }
+
+  &:last-child > .fa {
+    transform: translate(2.2rem, 2.2rem) rotate(-45deg);
   }
 
 
