@@ -49,57 +49,21 @@ export default class App extends React.Component {
   }
 
   render() {
+
+    // Methods that will be passed as props
+    const droneMethods = {
+      status: this.state.status,
+      takeoff: this._takeoff,
+      land: this._land,
+      turn: this._turn,
+      move: this._move,
+      emergency: this._emergency
+    };
+
     return (
       <div>
 
-        <p>
-          <strong>Status: </strong>
-          { this.state.status }
-        </p>
-
-        <ul>
-          <li>
-            <a href="" onClick={this._takeoff}>Takeoff</a>
-          </li>
-          <li>
-            <a href="" onClick={this._land}>Land</a>
-          </li>
-          <li>
-            <a href="" onClick={this._emergency}>Emergency</a>
-          </li>
-        </ul>
-
-        <h2>Moving drone</h2>
-        <ul>
-          <li>
-            <a href="" onClick={this._move.bind(this, 'forward')}>Move forward</a>
-          </li>
-          <li>
-            <a href="" onClick={this._move.bind(this, 'right')}>Move right</a>
-          </li>
-          <li>
-            <a href="" onClick={this._move.bind(this, 'left')}>Move left</a>
-          </li>
-          <li>
-            <a href="" onClick={this._move.bind(this, 'backward')}>Move backward</a>
-          </li>
-        </ul>
-
-        <h2>Turning drone</h2>
-        <ul>
-          <li>
-            <a href="" onClick={this._turn.bind(this, 'up')}>Rise drone</a>
-          </li>
-          <li>
-            <a href="" onClick={this._turn.bind(this, 'right')}>Turn right</a>
-          </li>
-          <li>
-            <a href="" onClick={this._turn.bind(this, 'down')}>Lower drone</a>
-          </li>
-          <li>
-            <a href="" onClick={this._turn.bind(this, 'left')}>Turn left</a>
-          </li>
-        </ul>
+        { this.props.children && React.cloneElement(this.props.children, droneMethods) }
 
       </div>
     );
