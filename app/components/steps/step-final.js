@@ -3,52 +3,44 @@ import React from 'react';
 export default ({ status, takeoff, land, emergency, move, turn }) => {
 
   return (
-    <div>
-      <p>
+    <div className="angular-2-sucks">
+      <p className="status">
         <strong>Status: </strong>
         { status }
       </p>
 
-      <ul>
-        <li>
-          <a href="" onClick={takeoff}>Takeoff</a>
-        </li>
-        <li>
-          <a href="" onClick={land}>Land</a>
-        </li>
-        <li>
-          <a href="" onClick={emergency}>Emergency</a>
-        </li>
-      </ul>
-
-      <h2>Moving drone</h2>
-      <ul>
-        <li>
+      <div className="buttons">
+        <button onClick={takeoff}>Takeoff</button>
+        <button onClick={land}>Land</button>
+        <button onClick={emergency}>Emergency</button>
+      </div>
+      
+      <ul className="d-arrows left">
+        <li className="d-arrow">
           <a href="" onClick={move.bind(null, 'forward')}>Move forward</a>
         </li>
-        <li>
+        <li className="d-arrow">
           <a href="" onClick={move.bind(null, 'right')}>Move right</a>
         </li>
-        <li>
+        <li className="d-arrow">
           <a href="" onClick={move.bind(null, 'left')}>Move left</a>
         </li>
-        <li>
+        <li className="d-arrow">
           <a href="" onClick={move.bind(null, 'backward')}>Move backward</a>
         </li>
       </ul>
 
-      <h2>Turning drone</h2>
-      <ul>
-        <li>
+      <ul className="d-arrows right">
+        <li className="d-arrow">
           <a href="" onClick={turn.bind(null, 'up')}>Rise drone</a>
         </li>
-        <li>
+        <li className="d-arrow">
           <a href="" onClick={turn.bind(null, 'right')}>Turn right</a>
         </li>
-        <li>
+        <li className="d-arrow">
           <a href="" onClick={turn.bind(null, 'down')}>Lower drone</a>
         </li>
-        <li>
+        <li className="d-arrow">
           <a href="" onClick={turn.bind(null, 'left')}>Turn left</a>
         </li>
       </ul>

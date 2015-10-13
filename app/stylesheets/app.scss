@@ -2,3 +2,132 @@
 @import 'variables';
 @import 'mixins';
 @import 'general';
+
+
+.d-arrow {
+  background: white;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  float: left;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0.5rem solid transparent;
+  background-clip: content-box;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+
+  > a {
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+
+  &:hover {
+    background: #d72272;
+    
+    > a {
+      color: white !important;
+    }
+  }
+
+  > * {
+    transform: rotate(-45deg);
+  }
+}
+
+.d-arrows {
+  transform: translateY(50%) rotate(45deg) ;
+  display: block;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  width: 50vmin;
+  height: 50vmin;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: center center;
+
+  &.right {
+    right: 0;
+    left: initial;
+    transform: translateY(50%) translateX(-25%) rotate(45deg);
+  }
+
+  &.left {
+    transform: translateY(50%) translateX(25%) rotate(45deg);
+  }
+}
+
+.buttons {
+  width: 25vw;
+  align-self: center;
+
+  > button {
+    appearance: none;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 1rem;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+}
+
+.angular-2-sucks {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  flex-direction: column;
+}
+
+.status {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 1rem;
+  text-transform: uppercase;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  position: relative;
+}
+
+html, body, .container, #drone-app {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  max-width: 100%;
+}
+
+#drone-app {
+  > *, > * > * {
+    height: 100%;
+  }
+}
+
