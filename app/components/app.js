@@ -2,8 +2,6 @@ import { socket } from './lib/socket';
 import keys from './lib/keys';
 import React from 'react';
 
-console.log('keys', keys);
-
 export default class App extends React.Component {
 
   constructor() {
@@ -53,22 +51,55 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <p>
-          <a href="" onClick={this._takeoff}>Takeoff</a>
-        </p>
-
-        <p>
-          <a href="" onClick={this._land}>Land</a>
-        </p>
-
-        <p>
-          <a href="" onClick={this._emergency}>Emergency</a>
-        </p>
 
         <p>
           <strong>Status: </strong>
           { this.state.status }
         </p>
+
+        <ul>
+          <li>
+            <a href="" onClick={this._takeoff}>Takeoff</a>
+          </li>
+          <li>
+            <a href="" onClick={this._land}>Land</a>
+          </li>
+          <li>
+            <a href="" onClick={this._emergency}>Emergency</a>
+          </li>
+        </ul>
+
+        <h2>Moving drone</h2>
+        <ul>
+          <li>
+            <a href="" onClick={this._move.bind(this, 'forward')}>Move forward</a>
+          </li>
+          <li>
+            <a href="" onClick={this._move.bind(this, 'right')}>Move right</a>
+          </li>
+          <li>
+            <a href="" onClick={this._move.bind(this, 'left')}>Move left</a>
+          </li>
+          <li>
+            <a href="" onClick={this._move.bind(this, 'backward')}>Move backward</a>
+          </li>
+        </ul>
+
+        <h2>Turning drone</h2>
+        <ul>
+          <li>
+            <a href="" onClick={this._turn.bind(this, 'up')}>Rise drone</a>
+          </li>
+          <li>
+            <a href="" onClick={this._turn.bind(this, 'right')}>Turn right</a>
+          </li>
+          <li>
+            <a href="" onClick={this._turn.bind(this, 'down')}>Lower drone</a>
+          </li>
+          <li>
+            <a href="" onClick={this._turn.bind(this, 'left')}>Turn left</a>
+          </li>
+        </ul>
 
       </div>
     );
@@ -119,24 +150,6 @@ export default class App extends React.Component {
     }
 
     socket.emit('turn', direction);
-  }
-
-  _up(e) {
-
-    if (e) {
-      e.preventDefault();
-    }
-
-    socket.emit('up');
-  }
-
-  _down(e) {
-
-    if (e) {
-      e.preventDefault();
-    }
-
-    socket.emit('down');
   }
 
   _emergency(e) {
