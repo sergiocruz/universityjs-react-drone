@@ -15,4 +15,4 @@ Let's fly a [Parrot mini-drone rolling spider](http://www.parrot.com/products/ro
 
 This repo was part of a talk done at a meetup in Orlando called [UniversityJS](http://www.meetup.com/University-JavaScript/events/225262781/) on October 14, 2015. It was their 1-year anniversary so we wanted to do something special.
 
-If you're interested in seeing the talk, here is a [YouTube link]( https://youtu.be/NmgPd2G3tRw?t=47m5s) for it, and also [my slides are here](http://slides.com/hashtagserg/flying-a-drone-with-javascript).
+If you're interested in seeing the talk here is a [YouTube link](https://youtu.be/NmgPd2G3tRw?t=47m5s) for it, and also [my slides are here](http://slides.com/hashtagserg/flying-a-drone-with-javascript).
