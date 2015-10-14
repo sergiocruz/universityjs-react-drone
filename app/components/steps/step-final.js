@@ -9,7 +9,7 @@ export default ({ status, takeoff, land, emergency, move, turn }) => {
         { status }
       </p>
 
-      <img src="http://label.sliptrickrecords.com/wp-content/uploads/2015/02/BlekGoat-logo_head_white-square-300x300.jpg" alt="" id="goat"/>
+      <img src="images/goat.png" alt="" id="goat"/>
 
       <div className="buttons">
         <button onClick={takeoff}>Takeoff</button>

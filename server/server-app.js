@@ -3,12 +3,6 @@ const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
 import drone from './drone';
-// import arDrone from 'ar-drone';
-// const client = arDrone.createClient();
-// client.config('general:navdata_demo', 'FALSE');
-
-// var pngStream = client.getPngStream();
-// console.log('pngStream', pngStream)
 
 
 server.listen(3005);
@@ -58,14 +52,6 @@ io.on('connection', (socket) => {
         console.log('done rotating', direction);
       })
 
-    // if (dir === 'right') {
-    //   client.clockwise(0.5);
-    // } else {
-    //   client.counterClockwise(0.5);
-    // }
-    //
-    // didAction();
-
 
   });
 
@@ -74,8 +60,7 @@ io.on('connection', (socket) => {
       .then(function() {
         console.log('moved up');
       })
-    // client.up(0.5);
-    // didAction();
+
   });
 
   socket.on('down', () => {

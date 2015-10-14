@@ -51,7 +51,8 @@ gulp.task('bundle', ['lint', 'styles'], () => {
  */
 gulp.task('default', ['bundle'], () => {
   browserSync.init({
-    server: 'public'
+    server: 'public',
+    notify: false
   });
 });
 
